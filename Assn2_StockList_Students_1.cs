@@ -18,6 +18,7 @@ namespace Assignment_2
     //summary      : checks if the list is empty
     //return       : true if list is empty, false otherwise
     //return type  : bool
+    // new comment for testing commit
     public bool IsEmpty()
     {
       if (this.head == null)
