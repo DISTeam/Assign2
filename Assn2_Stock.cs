@@ -15,7 +15,7 @@
       Holdings = 0;
       CurrentPrice = -99;
     }
-
+		//check for commit
     // Constructor for initialization
     public Stock(string symbol, string name, decimal holdings, decimal currentPrice)
     {
