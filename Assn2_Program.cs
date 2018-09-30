@@ -14,6 +14,7 @@ namespace Assignment_2
       Stock stockSix = new Stock("B", "Barnes ", 2.2m, 68.7m);
       Stock stockSeven = new Stock("GOOG", "Google", 3.6m, 115.3m);
       Stock stockEight = new Stock("AAPL", "Apple", 5m, 147.6m);
+            //commmi1
       Stock stockNine = new Stock("GOOG", "Google", 1.2m, 6.27m);
 
       ClientPortfolio client1 = new ClientPortfolio("Andrew", "Mountain View", "555-111-9070");
