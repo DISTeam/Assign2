@@ -13,7 +13,7 @@ namespace Assignment_2
     public StockList()
     {
       this.head = null;
-            //initial git commit
+            //initial git commit1
     }
 
     //param        : NA
