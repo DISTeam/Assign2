@@ -22,9 +22,11 @@ namespace Assignment_2
       client1.StockList.AddStock(stockTwo);
       client1.StockList.AddStock(stockThree);
       client1.StockList.AddStock(stockFour);
-      client1.StockList.AddStock(stockNine);
+		//client1.StockList.AddStock(stockNine);
+		client1.StockList.AddStock(stockFive);
+		//client1.StockList.AddStock(stockSix);
 
-      Console.WriteLine("**************************Client-1 Portfolio*****************************************");
+			Console.WriteLine("**************************Client-1 Portfolio*****************************************");
       client1.StockList.Print();
       Console.WriteLine("Number of shares :" + client1.StockList.Length());
       Console.WriteLine("Current value of portfolio for client 1 :" + client1.GetPortfolioValue());
