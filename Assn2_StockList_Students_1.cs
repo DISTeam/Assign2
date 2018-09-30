@@ -12,7 +12,7 @@ namespace Assignment_2
     public StockList()
     {
       this.head = null;
-            //this ha
+            //just adding 
     }
 
     //param        : NA
