@@ -47,7 +47,7 @@ namespace Assignment_2
 		{
 			int length = 0;
 			// write your implementation here
-						
+									
 			//***Implementation Begin - Added by Manasa***
 			//check if the list is empty and if so then set number of nodes is 0
 			if (this.IsEmpty())
