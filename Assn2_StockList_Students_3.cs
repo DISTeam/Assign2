@@ -28,9 +28,11 @@ namespace Assignment_2
      
                 while (items.Next != null)
                 {
-                    items = items.Next;
+                   
                    value = value + items.StockHolding.Holdings * items.StockHolding.CurrentPrice;
+                    items = items.Next;
                 }
+                value = value + items.StockHolding.Holdings * items.StockHolding.CurrentPrice;
 
 
 
@@ -62,9 +64,11 @@ namespace Assignment_2
              
                 while (items.Next != null)
                 {
-                    items = items.Next;
+                    
                     stock1.Add(items.StockHolding.Symbol);
+                    items = items.Next;
                 }
+                stock1.Add(items.StockHolding.Symbol);
             }
 
             var stock2 = new List<string>();
@@ -78,9 +82,11 @@ namespace Assignment_2
               
                 while (items.Next != null)
                 {
-                    items = items.Next;
+                    
                     stock2.Add(items.StockHolding.Symbol);
-                };
+                    items = items.Next;
+                }
+                stock2.Add(items.StockHolding.Symbol);
             }
 
             var CommonList = stock1.Intersect(stock2);
@@ -106,10 +112,11 @@ namespace Assignment_2
               
                 while (items.Next != null)
                 {
-                    items = items.Next;
+                   
                     Console.WriteLine(items.StockHolding.ToString());
+                    items = items.Next;
                 }
-
+                Console.WriteLine(items.StockHolding.ToString());
             }
 
         }
