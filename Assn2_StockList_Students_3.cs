@@ -14,7 +14,20 @@ namespace Assignment_2
     {
       decimal value = 0.0m;
 
-      // write your implementation here
+            // write your implementation here
+
+            if (!this.IsEmpty())
+            {
+
+
+
+
+
+
+
+
+
+            }
 
       return value;
     }
