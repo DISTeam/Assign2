@@ -104,19 +104,25 @@ namespace Assignment_2
     {
             // write your implementation here
 
-            if (!this.IsEmpty())
-            {
-                StockNode items = this.head;
-                Console.WriteLine(items.StockHolding.ToString());
+            /* if (!this.IsEmpty())
+             {
+                 StockNode items = this.head;
+                 Console.WriteLine(items.StockHolding.ToString());
 
-              
-                while (items.Next != null)
-                {
-                   
-                    Console.WriteLine(items.StockHolding.ToString());
-                    items = items.Next;
-                }
-                Console.WriteLine(items.StockHolding.ToString());
+
+                 while (items.Next != null)
+                 {
+
+                     Console.WriteLine(items.StockHolding.ToString());
+                     items = items.Next;
+                 }
+                 Console.WriteLine(items.StockHolding.ToString());
+             }*/
+            StockNode s = this.head;
+            while (s.Next != null)
+            {
+                Console.Write(s.StockHolding + "\n");
+                s = s.Next;
             }
 
         }
