@@ -106,7 +106,7 @@ namespace Assignment_2
 
             if (!this.IsEmpty())
             {
-                StockNode items = this.head;
+                /*StockNode items = this.head;
                 Console.WriteLine(items.StockHolding.ToString());
 
               
@@ -116,7 +116,13 @@ namespace Assignment_2
                     Console.WriteLine(items.StockHolding.ToString());
                     items = items.Next;
                 }
-                Console.WriteLine(items.StockHolding.ToString());
+                Console.WriteLine(items.StockHolding.ToString());*/
+                StockNode s = this.head;
+                while (s.Next != null)
+                {
+                    Console.Write(s.StockHolding + "\n");
+                    s = s.Next
+
             }
 
         }
