@@ -118,6 +118,7 @@ namespace Assignment_2
                  }
                  Console.WriteLine(items.StockHolding.ToString());
              }*/
+             //this method prints the data present in stock list to the console
             StockNode s = this.head;
             while (s.Next != null)
             {
