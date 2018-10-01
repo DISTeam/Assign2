@@ -38,10 +38,15 @@ namespace Assignment_2
     //return type  : NA
     public void Print()
     {
-      // write your implementation here
-
-			
-
+            // write your implementation here
+            StockNode s = this.head;
+            while (s.Next != null)
+            {
+                Console.Write(s.StockHolding+"\n");
+                s = s.Next;
+            }
+           
+            //Method implementation done by Amar Guru Datta
     }
   }
 }

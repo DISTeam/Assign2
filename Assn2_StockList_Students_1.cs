@@ -229,14 +229,64 @@ namespace Assignment_2
     //summary      : Sort the list by descending number of holdings
     //return       : NA
     //return type  : NA
-    public void SortByValue(StockList stockList)
-    {
-            StockNode temp = stockList.head;
+    public void SortByValue()
+    {    
+            StockNode temp = this.head;
+            int stockSize = 0; 
             while (temp.Next != null)
             {
+                stockSize++;
                 temp = temp.Next;//simple traversal, testing and integration in progress <author: Amar Guru Datta>
+                
             }
-           
+            decimal[] holdings = new decimal[stockSize];
+            decimal[] currentPrice = new decimal[stockSize];
+            string[] symbol = new string[stockSize];
+            string[] name = new string[stockSize];
+            temp = this.head;
+            int iterator = 0;
+            while (temp.Next != null)
+            {
+                holdings[iterator] = temp.StockHolding.Holdings;
+                currentPrice[iterator] = temp.StockHolding.CurrentPrice;
+                symbol[iterator] = String.Copy(temp.StockHolding.Symbol);
+                name[iterator] = String.Copy(temp.StockHolding.Name);
+                temp = temp.Next;//simple traversal, testing and integration in progress <author: Amar Guru Datta>
+                iterator++;
+            }
+            
+            for (int i = 0; i < stockSize - 1; i++)
+                for (int j = 0; j < stockSize - i - 1; j++)
+                    if (holdings[j] < holdings[j + 1])
+                    {
+                        // swap temp and arr[i] 
+                        decimal temp1 = holdings[j];
+                        holdings[j] = holdings[j + 1];
+                        holdings[j + 1] = temp1;
+
+                        decimal temp2 = currentPrice[j];
+                        currentPrice[j] = currentPrice[j + 1];
+                        currentPrice[j + 1] = temp2;
+
+                        string temp3 =String.Copy(name[j]);
+                        name[j] = String.Copy(name[j + 1]);
+                        name[j + 1] = String.Copy(temp3);
+
+                        string temp4 = String.Copy(symbol[j]);
+                        symbol[j] = String.Copy(symbol[j + 1]);
+                        symbol[j + 1] = String.Copy(temp4);
+                    }
+            temp = this.head;
+            iterator = 0;
+            while (temp.Next != null)
+            {
+                temp.StockHolding.Holdings = holdings[iterator];
+                temp.StockHolding.CurrentPrice = currentPrice[iterator];
+                temp.StockHolding.Name = String.Copy(name[iterator]);
+                temp.StockHolding.Symbol = String.Copy(symbol[iterator]);
+                temp = temp.Next;//simple traversal, testing and integration in progress <author: Amar Guru Datta>
+                iterator++;
+            }
         }
 
     //param        : NA
@@ -245,8 +295,67 @@ namespace Assignment_2
     //return type  : NA
     public void SortByName()
     {
-      // write your implementation here
+            // write your implementation here
+            StockNode temp = this.head;
+            int stockSize = 0;
+            while (temp.Next != null)
+            {
+                stockSize++;
+                temp = temp.Next;//simple traversal, testing and integration in progress <author: Amar Guru Datta>
 
-    }
+            }
+            decimal[] holdings = new decimal[stockSize];
+            decimal[] currentPrice = new decimal[stockSize];
+            string[] symbol = new string[stockSize];
+            string[] name = new string[stockSize];
+            temp = this.head;
+            int iterator = 0;
+            while (temp.Next != null)
+            {
+                holdings[iterator] = temp.StockHolding.Holdings;
+                currentPrice[iterator] = temp.StockHolding.CurrentPrice;
+                symbol[iterator] = String.Copy(temp.StockHolding.Symbol);
+                name[iterator] = String.Copy(temp.StockHolding.Name);
+                temp = temp.Next;//simple traversal, testing and integration in progress <author: Amar Guru Datta>
+                iterator++;
+            }
+
+            for (int i = 1; i < name.Length; i++)
+            {
+                for (int j = 0; j < name.Length - i; j++)
+                {
+                    if (name[j].CompareTo(name[j + 1]) > 0)
+                    {
+                        string tempname = String.Copy(name[j]);
+                        name[j] = String.Copy(name[j + 1]);
+                        name[j + 1] = String.Copy(tempname);
+
+                        string tempsym = String.Copy(symbol[j]);
+                        symbol[j] = String.Copy(symbol[j + 1]);
+                        symbol[j + 1] = String.Copy(tempsym);
+
+                        decimal tempholding = holdings[j];
+                        holdings[j] = holdings[j + 1];
+                        holdings[j + 1] = tempholding;
+
+                        decimal currprice = currentPrice[j];
+                        currentPrice[j] = currentPrice[j + 1];
+                        currentPrice[j + 1] = currprice;
+                    }
+                }
+            }
+
+            temp = this.head;
+            iterator = 0;
+            while (temp.Next != null)
+            {
+                temp.StockHolding.Holdings = holdings[iterator];
+                temp.StockHolding.CurrentPrice = currentPrice[iterator];
+                temp.StockHolding.Name = String.Copy(name[iterator]);
+                temp.StockHolding.Symbol = String.Copy(symbol[iterator]);
+                temp = temp.Next;//simple traversal, testing and integration in progress <author: Amar Guru Datta>
+                iterator++;
+            }
+        }
   }
 }
