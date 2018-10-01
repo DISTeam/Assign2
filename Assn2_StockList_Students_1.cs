@@ -9,10 +9,11 @@ namespace Assignment_2
     private StockNode head;
 
     //Constructor for initialization
+    
     public StockList()
     {
       this.head = null;
-            //just adding 
+            //initial git commit1
     }
 
     //param        : NA
@@ -228,11 +229,15 @@ namespace Assignment_2
     //summary      : Sort the list by descending number of holdings
     //return       : NA
     //return type  : NA
-    public void SortByValue()
+    public void SortByValue(StockList stockList)
     {
-      // write your implementation here
-
-    }
+            StockNode temp = stockList.head;
+            while (temp.Next != null)
+            {
+                temp = temp.Next;//simple traversal, testing and integration in progress <author: Amar Guru Datta>
+            }
+           
+        }
 
     //param        : NA
     //summary      : Sort the list alphabatically
