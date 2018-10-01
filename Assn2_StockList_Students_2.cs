@@ -13,21 +13,22 @@ namespace Assignment_2
 		public StockList MergeList(StockList listToMerge)
 		{
 			StockList resultList = new StockList();
-			//Stock currentStock;
+
 			// write your implementation here1
 			// Added by Manasa - start of code
+			//assigning the stock of the client who called the function merge
 			StockNode current = this.head;
+			// that first list to be merged is assigned to the new stocklist -which holds the merged list
 			resultList.head = current;
-
-			//current.Next = listToMerge.head;
+			
 			Stock stockToAdd = listToMerge.head.StockHolding;
-			//int n = listToMerge.Length();
-			//for (int n = 1; n < listToMerge.Length(); n++)
+			
 			while(listToMerge.head != null)
 			{
-				//stockToAdd = listToMerge.head.StockHolding;
+				// this function call adds each stock to the stocklist -resultList
+				//while also trying to merge any existing stock with their holdings
 				resultList.AddStock(listToMerge.head.StockHolding);
-				//resultList.head.StockHolding = listToMerge.head.StockHolding;
+				// to traverse the stocklist to the next node
 				listToMerge.head = listToMerge.head.Next;
 			}
 			//Added by Manasa - end of code
@@ -42,33 +43,18 @@ namespace Assignment_2
 		{
 			Stock mostShareStock = null;
 			//manasa code -added start
-			// traverse the list to locate the stock	
-
-			//check if the list is empty and return an empty stock
-			//if (this.IsEmpty())
+			// traverse the list to locate the stock. this function sorts the list in descending order	
 			this.SortByValue();
-			//else
+			
+			   		
 			// go to the head node first 
-			StockNode current = this.head;
-			StockNode previous = null;
-			//decimal currentMaxHoldings;
+			StockNode current = this.head;	
+			// the holding value of the first and max stock
 			decimal maxHoldings=(current.StockHolding).Holdings;
-			while (current.Next != null)
-			{
-				previous = current;
-				current = current.Next;
-				//if ((previous.StockHolding).Holdings > (current.StockHolding).Holdings)
-				//	currentMaxHoldings = previous.StockHolding.Holdings;
-				//else
-				//	currentMaxHoldings = (current.StockHolding).Holdings;
-				//if (maxHoldings <= currentMaxHoldings)
-				//	maxHoldings = currentMaxHoldings;
-					
-			}
+			//assigning the most holding stock to the variable of type stock to display
+			mostShareStock = current.StockHolding;
 
 			//manasa code - added end 
-
-			mostShareStock = current.StockHolding;
 			return mostShareStock;
 		}
 
@@ -90,7 +76,7 @@ namespace Assignment_2
 				// go to the head node first 
 				StockNode current = this.head;
 				//count the head node as 1
-				length++;
+				//length++;
 				// traverse the list till the end
 				while (current.Next != null)
 				{
