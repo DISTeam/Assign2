@@ -5,10 +5,10 @@ C:\Users\traje\source\repos\Assignment2\Assignment2\Assign2\bin\Debug\Assignment
 C:\Users\traje\source\repos\Assignment2\Assignment2\Assign2\bin\Debug\Assignment2.pdb
 C:\Users\traje\source\repos\Assignment2\Assignment2\Assign2\obj\Debug\Assignment2.exe
 C:\Users\traje\source\repos\Assignment2\Assignment2\Assign2\obj\Debug\Assignment2.pdb
-C:\Users\chira\Documents\GitHub\Assign\bin\Debug\Assignment2.exe.config
-C:\Users\chira\Documents\GitHub\Assign\bin\Debug\Assignment2.exe
-C:\Users\chira\Documents\GitHub\Assign\bin\Debug\Assignment2.pdb
-C:\Users\chira\Documents\GitHub\Assign\obj\Debug\Assignment2.csprojAssemblyReference.cache
-C:\Users\chira\Documents\GitHub\Assign\obj\Debug\Assignment2.csproj.CoreCompileInputs.cache
-C:\Users\chira\Documents\GitHub\Assign\obj\Debug\Assignment2.exe
-C:\Users\chira\Documents\GitHub\Assign\obj\Debug\Assignment2.pdb
+C:\Users\I AM MANO\Documents\GitHub\Assign2\bin\Debug\Assignment2.exe.config
+C:\Users\I AM MANO\Documents\GitHub\Assign2\bin\Debug\Assignment2.exe
+C:\Users\I AM MANO\Documents\GitHub\Assign2\bin\Debug\Assignment2.pdb
+C:\Users\I AM MANO\Documents\GitHub\Assign2\obj\Debug\Assignment2.csprojAssemblyReference.cache
+C:\Users\I AM MANO\Documents\GitHub\Assign2\obj\Debug\Assignment2.csproj.CoreCompileInputs.cache
+C:\Users\I AM MANO\Documents\GitHub\Assign2\obj\Debug\Assignment2.exe
+C:\Users\I AM MANO\Documents\GitHub\Assign2\obj\Debug\Assignment2.pdb
