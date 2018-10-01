@@ -62,6 +62,7 @@
     <None Include="obj\Debug\Assignment2.csprojAssemblyReference.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Release\Assignment2.csproj.CoreCompileInputs.cache" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitattributes" />

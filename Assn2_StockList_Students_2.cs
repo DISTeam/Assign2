@@ -27,15 +27,33 @@ namespace Assignment_2
 		{
 			Stock mostShareStock = null;
 			//manasa code -added start
+			// traverse the list to locate the stock	
 
-
-
-
-
+			//check if the list is empty and return an empty stock
+			//if (this.IsEmpty())
+			this.SortByValue();
+			//else
+			// go to the head node first 
+			StockNode current = this.head;
+			StockNode previous = null;
+			//decimal currentMaxHoldings;
+			decimal maxHoldings=(current.StockHolding).Holdings;
+			while (current.Next != null)
+			{
+				previous = current;
+				current = current.Next;
+				//if ((previous.StockHolding).Holdings > (current.StockHolding).Holdings)
+				//	currentMaxHoldings = previous.StockHolding.Holdings;
+				//else
+				//	currentMaxHoldings = (current.StockHolding).Holdings;
+				//if (maxHoldings <= currentMaxHoldings)
+				//	maxHoldings = currentMaxHoldings;
+					
+			}
 
 			//manasa code - added end
 
-
+			mostShareStock = current.StockHolding;
 			return mostShareStock;
 		}
 
