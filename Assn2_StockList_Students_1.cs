@@ -9,10 +9,11 @@ namespace Assignment_2
     private StockNode head;
 
     //Constructor for initialization
+    
     public StockList()
     {
       this.head = null;
-            //just adding 
+            //initial git commit1
     }
 
     //param        : NA
