@@ -18,12 +18,17 @@ namespace Assignment_2
 
             if (!this.IsEmpty())
             {
-             
 
 
+                StockNode items = this.head;
+                value = value + items.StockHolding.Holdings * items.StockHolding.CurrentPrice;
 
-
-
+                do
+                {
+                    items = items.Next;
+                    value = value + items.StockHolding.Holdings * items.StockHolding.CurrentPrice;
+                }
+                while (items.Next != null);
 
 
 
