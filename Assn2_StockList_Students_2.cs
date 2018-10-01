@@ -76,7 +76,7 @@ namespace Assignment_2
 				// go to the head node first 
 				StockNode current = this.head;
 				//count the head node as 1
-				//length++;
+				length++;
 				// traverse the list till the end
 				while (current.Next != null)
 				{

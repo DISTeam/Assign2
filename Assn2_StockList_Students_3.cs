@@ -14,30 +14,19 @@ namespace Assignment_2
     public decimal Value()
     {
       decimal value = 0.0m;
-
             // write your implementation here
 
             if (!this.IsEmpty())
             {
-
-
                 StockNode items = this.head;
-                value = value + items.StockHolding.Holdings * items.StockHolding.CurrentPrice;
-
-              
+                //value = value + (items.StockHolding.Holdings * items.StockHolding.CurrentPrice);              
      
                 while (items.Next != null)
-                {
-                   
-                   value = value + items.StockHolding.Holdings * items.StockHolding.CurrentPrice;
-                    items = items.Next;
+                {                   
+                   value = value + (items.StockHolding.Holdings * items.StockHolding.CurrentPrice);
+                   items = items.Next;
                 }
-                value = value + items.StockHolding.Holdings * items.StockHolding.CurrentPrice;
-
-
-
-
-
+                value = value + (items.StockHolding.Holdings * items.StockHolding.CurrentPrice);
             }
 
       return value;
@@ -57,10 +46,8 @@ namespace Assignment_2
 
             if (!this.IsEmpty())
             {
-
                 StockNode items = this.head;
                 stock1.Add(items.StockHolding.Symbol);
-
              
                 while (items.Next != null)
                 {
@@ -104,20 +91,6 @@ namespace Assignment_2
     {
             // write your implementation here
 
-            /* if (!this.IsEmpty())
-             {
-                 StockNode items = this.head;
-                 Console.WriteLine(items.StockHolding.ToString());
-
-
-                 while (items.Next != null)
-                 {
-
-                     Console.WriteLine(items.StockHolding.ToString());
-                     items = items.Next;
-                 }
-                 Console.WriteLine(items.StockHolding.ToString());
-             }*/
              //this method prints the data present in stock list to the console
             StockNode s = this.head;
             while (s.Next != null)
@@ -125,6 +98,7 @@ namespace Assignment_2
                 Console.Write(s.StockHolding + "\n");
                 s = s.Next;
             }
+			Console.WriteLine(s.StockHolding);
 
         }
   }
