@@ -20,8 +20,9 @@ namespace Assignment_2
             if (!this.IsEmpty())
             {
 
-
+                //added by Mano -starti of code
                 StockNode items = this.head;
+                //this will append the newly added value into variable value
                 value = value + items.StockHolding.Holdings * items.StockHolding.CurrentPrice;
 
               
@@ -34,7 +35,7 @@ namespace Assignment_2
                 }
                 value = value + items.StockHolding.Holdings * items.StockHolding.CurrentPrice;
 
-
+                //end of code added by Mano
 
 
 
@@ -52,16 +53,16 @@ namespace Assignment_2
       int similarityIndex = 0;
 
             // write your implementation here
-
+            //code added by Mano
             var stock1 = new List<string>();
-
+            //checks if the list is empty
             if (!this.IsEmpty())
             {
 
                 StockNode items = this.head;
                 stock1.Add(items.StockHolding.Symbol);
 
-             
+             //takes the symbol of each list holding and compares
                 while (items.Next != null)
                 {
                     
@@ -72,7 +73,7 @@ namespace Assignment_2
             }
 
             var stock2 = new List<string>();
-
+            //list 1 compares to lsit symbols
             if (!listToCompare.IsEmpty())
             {
                 var items = new StockNode();
@@ -94,6 +95,7 @@ namespace Assignment_2
 
 
             return similarityIndex;
+            //end of code added by Mano
     }
 
     //param        : NA
@@ -117,12 +119,15 @@ namespace Assignment_2
                     items = items.Next;
                 }
                 Console.WriteLine(items.StockHolding.ToString());*/
+                //code added by Mano -start
             StockNode s = this.head;
             while (s.Next != null)
             {
                 Console.Write(s.StockHolding + "\n");
                 s = s.Next;
             }
+            Console.Write(s.StockHolding + "\n");
+            //end of code added by Mano
         }
 
         }
