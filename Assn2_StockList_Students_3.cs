@@ -127,7 +127,7 @@ namespace Assignment_2
                 s = s.Next;
             }
             Console.Write(s.StockHolding + "\n");
-            //end of code added by Mano
+            //end of code added by `
         }
 
         }
